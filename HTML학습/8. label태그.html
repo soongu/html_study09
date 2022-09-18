@@ -16,14 +16,25 @@
         }
     </style>
 </head>
+<script>
+    window.onload = function () {
+        var button1 = document.getElementById('button-1');
+
+        button1.onclick = function(event){
+            var counter = document.getElementById('counter-1');
+            var count = Number(counter.innerText);
+            counter.innerText =  "" + (count + 1);
+        }
+    }
+</script>
 <body>
     
     <form action="#">
 
-        <label>
+        <label id="button-1" onclick="onClick()">
             <input type="checkbox"> 자동 로그인
         </label>
-        
+        <h1>counter1: <span id="counter-1">0</span></h1>
         <label for="remember">
             ID 기억하기
         </label>
